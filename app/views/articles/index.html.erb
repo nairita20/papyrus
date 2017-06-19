@@ -1,24 +1,50 @@
-
-<h1>Articles Listing</h1>
+<h1>ARTICLES LISTING</h1>
  
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #aaaaaa;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: beige;
+}
+</style>
+</head>
+<body>
+
 <table>
   <tr>
     <th>Title</th>
-    <th>Text</th>
+    <!-- <th>Text</th> -->
     <th>Summary</th>
-    <th colspan="2"></th>
+    <th>Actions</th>
+    
   </tr>
- 
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td>
-      <td><%= article.text %></td>
+      <!-- <td><%#= article.text %></td> -->
       <td><%= article.summary %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      
+      <td><%= link_to 'Show', article_path(article) %>   <%= link_to 'Edit', edit_article_path(article) %>    <%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+
     </tr>
   <% end %>
-  <!--
   <%= link_to 'New article', new_article_path %>
-  -->
 </table>
+
+</body>
+</html>
