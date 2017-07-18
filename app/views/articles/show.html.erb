@@ -30,6 +30,8 @@ tr:nth-child(odd) {
  <p>
    <strong>Title:</strong>
    <%= @article.title %>
+   <strong>Submitted :</strong>
+   <%= time_ago_in_words (@article.created_at) %> ago
  </p>
  </td>
  </tr>

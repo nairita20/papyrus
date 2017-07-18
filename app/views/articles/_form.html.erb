@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #aaaaaa;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #DEB887;
+}
+</style>
+</head>
+<body>
 
 <%= form_for @article do |f| %>
  
@@ -15,23 +37,41 @@
     </div>
   <% end %>
  
+  <table>
+  <tr>
+  <td>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
- 
+  </tr>
+  </td>
+  
+  <tr>
+  <td>
   <p>
     <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.text_area :text, :cols => "50", :rows => "20"%>
   </p>
-
+  </td>
+  </tr>
+ 
+  <tr>
+  <td>
   <p>
     <%= f.label :summary %><br>
     <%= f.text_area :summary %>
   </p>
- 
+  </td>
+  </tr>
+  
+  <tr>
+  <td>
   <p>
     <%= f.submit %>
   </p>
+  </td>
+  </tr>
+  </table>
  
 <% end %>

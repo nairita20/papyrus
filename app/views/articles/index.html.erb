@@ -4,21 +4,22 @@
 <html>
 <head>
 <style>
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
 
 td, th {
-    border: 1px solid #aaaaaa;
-    text-align: left;
-    padding: 8px;
-}
+          border: 1px solid #aaaaaa;
+          text-align: left;
+          padding: 8px;
+       }
 
 tr:nth-child(odd) {
-    background-color: beige;
-}
+                    background-color: beige;
+                  }
 </style>
 </head>
 <body>
@@ -31,6 +32,7 @@ tr:nth-child(odd) {
     <th>Actions</th>
     
   </tr>
+
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td>
@@ -42,9 +44,33 @@ tr:nth-child(odd) {
               data: { confirm: 'Are you sure?' } %></td>
 
     </tr>
+
   <% end %>
-  <%= link_to 'New article', new_article_path %>
 </table>
+
+ <table>
+   <tr>
+     <td>
+       
+     </td>
+   </tr>
+   <tr>
+     <td>
+       
+     </td>
+   </tr>
+ </table>
+
+  <table>
+      <tr>
+      <td>
+        <%= 'CLICK ON THE ADJOINING LINK TO UPLOAD YOUR ARTICLE' %>
+      </td>
+      <td>
+      <%= link_to 'NEW ARTICLE', new_article_path %>
+      </td>
+      </tr>
+  </table>
 
 </body>
 </html>

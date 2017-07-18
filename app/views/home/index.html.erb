@@ -1,0 +1,54 @@
+<h1>WELCOME TO BLOG : HOME</h1>
+
+<!-- <h1>Home#index</h1> -->
+<!-- <p>Find me in app/views/home/index.html.erb</p> -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+td, th {
+          border: 1px solid #aaaaaa;
+          text-align: left;
+          padding: 8px;
+       }
+
+tr:nth-child(odd) {
+                    background-color: lightblue;
+                  }
+</style>
+</head>
+<body>
+
+
+<table>
+<tr>
+ <td> This is a platform for all blog enthusiasts around the world to write, share and read interesting articles about all kinds of things related to anyone and everyone around the world!!! Feel free to jump in and contribute or just enjoy reading the articles listed here. </td> 
+</tr>
+</table>
+
+<table>
+<tr>
+  <td>click to view our articles: </td>
+  <td><%= link_to 'Articles Listing', articles_path(@article) %> </td>
+</tr>
+
+<tr>
+<td>click to upload your article: </td>
+<td><%= link_to 'New Article', new_article_path(@article) %></td>  
+</tr>
+</table>
+
+<table>
+<tr>
+  <td>Please understand that this is a blog meant purely to encourage a network of readers and writers to come together and discuss various topics. Political discussions are encouraged but in a constructive way. No intolerance against any religion will be entertained here! </td>
+</tr>
+</table>
+
+ 
