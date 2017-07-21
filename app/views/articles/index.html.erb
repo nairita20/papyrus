@@ -1,30 +1,33 @@
+ <div class="container"> 
+
+<div class="page-header">
 <h1>ARTICLES LISTING</h1>
- 
+ </div>
 <!DOCTYPE html>
 <html>
 <head>
 <style>
 
-table {
+/*table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
-      }
+      }*/
 
-td, th {
+/*td, th {
           border: 1px solid #aaaaaa;
           text-align: left;
           padding: 8px;
-       }
+       }*/
 
-tr:nth-child(odd) {
+/*tr:nth-child(odd) {
                     background-color: beige;
-                  }
+                  }*/
 </style>
 </head>
 <body>
-
-<table>
+<!-- <div class="container"> -->
+  <table class="table table-striped">
   <tr>
     <th>Title</th>
     <!-- <th>Text</th> -->
@@ -39,7 +42,11 @@ tr:nth-child(odd) {
       <!-- <td><%#= article.text %></td> -->
       <td><%= article.summary %></td>
       
-      <td><%= link_to 'Show', article_path(article) %>   <%= link_to 'Edit', edit_article_path(article) %>    <%= link_to 'Destroy', article_path(article),
+      <td>
+        <%= link_to '', article_path(article), class: "glyphicon glyphicon-book" %> 
+
+        <%= link_to '', edit_article_path(article), class: "glyphicon glyphicon-pencil" %>  
+          <%= link_to '', article_path(article), class: "glyphicon glyphicon-trash",
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
 
@@ -47,6 +54,9 @@ tr:nth-child(odd) {
 
   <% end %>
 </table>
+
+
+
 
  <table>
    <tr>
@@ -63,14 +73,14 @@ tr:nth-child(odd) {
 
   <table>
       <tr>
-      <td>
+      <td style="padding-right: 600px;">
         <%= 'CLICK ON THE ADJOINING LINK TO UPLOAD YOUR ARTICLE' %>
-      </td>
+      </td> 
       <td>
-      <%= link_to 'NEW ARTICLE', new_article_path %>
+      <%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
       </td>
       </tr>
   </table>
-
+</div>
 </body>
 </html>

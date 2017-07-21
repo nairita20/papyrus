@@ -1,35 +1,40 @@
-<h1>ARTICLE : </h1>
+ <div class="container"> 
+
+<div class="page-header">
+<h1 >ARTICLE </h1>
+ </div>
+<!-- <h1>ARTICLE : </h1> -->
 
 <!DOCTYPE html>
 <html>
 <head>
 <style>
 
-table {
+/*table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-}
+}*/
 
-td, th {
+/*td, th {
     border: 1px solid #aaaaaa;
     text-align: left;
     padding: 8px;
-}
+}*/
 
-tr:nth-child(odd) {
+/*tr:nth-child(odd) {
     background-color: beige;
-}
+}*/
 </style>
 </head>
 
 <body>
-<table>
+<table class="table table-striped">
  <tr>
  <td>
  <p>
    <strong>Title:</strong>
-   <%= @article.title %>
+   <%= @article.title %><br>
    <strong>Submitted :</strong>
    <%= time_ago_in_words (@article.created_at) %> ago
  </p>
@@ -63,13 +68,13 @@ tr:nth-child(odd) {
         #style-3::-webkit-scrollbar-track
         {
           -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-          background-color: #9999FA;
+          background-color: #FFFFFF;
         }
 
         #style-3::-webkit-scrollbar
         {
           width: 6px;
-          background-color: #FF0000;
+          background-color: #FFFFFF;
         }
 
         #style-3::-webkit-scrollbar-thumb
