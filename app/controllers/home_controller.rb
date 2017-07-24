@@ -1,8 +1,10 @@
-class HomeController < ApplicationController 
-  # def new 
-  # end
-  # def index   
-  # end
-  # def show 
-  # end
+class HomeController < ApplicationController
+
+  def new 
+  end
+
+  def index  
+    render 'index' 
+  end
+  
 end
