@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   get 'home/index'
   get 'authors/homepage'
+  get 'authors/initiative_page'
+  get 'authors/musings_page'
 
   get 'travels/homepage'
   get 'fashions/homepage'
