@@ -1,4 +1,4 @@
-<div class="container" style="margin-top:200px"> 
+<div class="container" style="margin-top:50px"> 
   <!-- <div class="page-header"> -->
   <!-- <h1 style= "color:black; font-style:italic; font-family:fantasy; text-align:center"> -->
   <!-- Fashion is a trend...<br>
@@ -9,25 +9,31 @@
   <html>
   <style> 
       body {
-             background-image: url("/authors2.jpg"); 
+             background-image: url("/authors1.jpg"); 
              background-size: cover;
              background-repeat: no-repeat;
            } 
   </style>
   </html>
 
-  <div class="img-wrapper" style="margin-top:5px">
-      <div class="img-overlay">
-        <div class="text-center">
-          <button class= "btn btn-success btn-lg">
-          <%= link_to 'Initiative', authors_initiative_page_path, :style=> 'color:white;', :class => 'css_class'%></button>
-          <button class= "btn btn-success btn-lg">
-          <%#= link_to 'Author Profiles', authors_author_profiles_page_path, :style=> 'color:white;', :class => 'css_class'%>
-          Author Profiles  
-          </button>
-          <button class= "btn btn-success btn-lg">
-          <%= link_to 'Musings', authors_musings_page_path, :style=> 'color:white;', :class => 'css_class'%></button>
-        </div>
-      </div>
+  <div class="card" style="width: 10rem height: 5rem;">
+    <img class="card-img-top" src="/author1.jpg" alt="Card image cap">
+    <div class="card-block">
+    <h4 class="card-title" style="color:black;">Name of Author</h4>
+    <p class="card-text" style="color:black;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div> 
+
+    <div style="margin-left:500px">
+    <img class="card-img-top" src="/author1.jpg" alt="Card image cap" >
+    <div class="card-block">
+    <h4 class="card-title" style="color:black;">Name of Author</h4>
+    <p class="card-text" style="color:black;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere else</a>
     </div>
+    </div> 
+
+  </div>
+
 </div>
+
