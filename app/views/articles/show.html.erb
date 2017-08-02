@@ -55,6 +55,8 @@
 
   <tr>
   <td>
+  <% if @article.comments != [] %>
+
       <h4>Comments:</h4>
 
     <div class="scroll">
@@ -91,7 +93,10 @@
       </td>
       </tr>
     </div>
+  <% end %>
+    
   <tr>
+
   <td> 
   <h4>Add a Comment:</h4>
   <%= render 'comments/form' %>
