@@ -1,0 +1,30 @@
+<div class="container" style="margin-top:200px"> 
+  <!-- <div class="page-header"> -->
+  <h1 style= "color:black; font-style:italic; font-family:fantasy; text-align:center">
+  If I paint a wild horse..<br>
+  You might not see the horse..<br>
+  But surely, you will see the wildness...<br>
+  ~ Pablo Picasso</h1>
+  <!-- </div> -->
+  <!DOCTYPE html>
+  <html>
+  <style> 
+      body {
+             background-image: url("/artbackground.jpg"); 
+             background-size: cover;
+             background-repeat: no-repeat;
+           } 
+  </style>
+  </html>
+
+  <div class="img-wrapper" style="margin-top:50px">
+      <div class="img-overlay">
+        <div class="text-center">
+          <button class= "btn btn-success btn-lg", background-color:black;>
+           <%= link_to 'Browse', artworks_index_path, :style=> 'color:white;', :class => 'css_class'%>
+          </button>
+          <button class= "btn btn-success btn-lg">Upload</button>
+        </div>
+      </div>
+    </div>
+</div>

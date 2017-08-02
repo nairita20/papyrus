@@ -42,6 +42,16 @@
   <% end %>
  
   <table class="table table-striped">
+
+    <tr>
+    <td>
+    <p>
+      <%= f.label :Category %><br>
+      <%= f.collection_select :category, ['Travel','Art','Music','Remembrance','Fashion','Food','Literature','Movies','Pets','Sports'], :to_s, :to_s, class: "form-control" %>
+    </p>
+    </td>
+    </tr>
+    
     <tr>
     <td>
     <p>
@@ -61,7 +71,6 @@
     </td>
     </tr>
     <!-- </div> -->
-   
     <tr>
     <td>
     <p>
@@ -70,6 +79,8 @@
     </p>
     </td>
     </tr>
+
+
     
     <tr>
     <td>

@@ -1,26 +1,63 @@
-<div class="container"> 
+<div class="container" style="margin-top:150px">> 
   <!-- <div class="page-header"> -->
+  
+  
   <h1 style= "color:white; font-style:italic; font-family:fantasy; text-align:center">
   Travel......<br>
   The best way to be lost.. and found...<br> 
   All at the same time!<br>
-  ~ Brenna Smith </h1>
+  ~ Brenna Smith</h1>
+  
+  
   <!-- </div> -->
   <!DOCTYPE html>
   <html>
   <style> 
-      body {
-             background-image: url("/travelbackground.jpg"); 
-             background-size: 1400px 1000px;
-             background-repeat: no-repeat;
-           } 
+        body::before {
+ background: url("/travelbackground.jpg") no-repeat center center fixed;
+ content: '';
+ z-index: -1;
+ width: 100%;
+ height: 100%;
+ position:absolute; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ -webkit-filter: blur(3px);
+ -moz-filter: blur(3px);
+ -o-filter: blur(3px);
+ -ms-filter: blur(3px);
+ filter: blur(3px);
+}
+/*      body::before {
+             
+             
+              background-image: url("/travelbackground.jpg") no-repeat center center fixed;
+ content: '';
+ z-index: -1;
+ width: 100%;
+ height: 100%;
+ position:absolute; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ -webkit-filter: blur(8px);
+ -moz-filter: blur(8px);
+ -o-filter: blur(8px);
+ -ms-filter: blur(8px);
+ filter: blur(8px);
+           } */
   </style>
   </html>
 
-  <div class="img-wrapper">
+  <div class="img-wrapper" style="margin-top:20px">>
       <div class="img-overlay">
         <div class="text-center">
-          <button class= "btn btn-success btn-lg">Browse</button>
+          <button class= "btn btn-success btn-lg">
+           <%= link_to 'Browse', travels_index_path, :style=> 'color:white;', :class => 'css_class'%>
+          </button>
           <button class= "btn btn-success btn-lg">Upload</button>
         </div>
       </div>

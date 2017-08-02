@@ -1,5 +1,5 @@
 <!-- homepage.h -->
-<div class="container"> 
+<div class="container" style="margin-top:150px"> 
   <!-- <div class="page-header"> -->
   <h1 style= "color:white; font-style:italic; font-family:fantasy; text-align:center">
   What's cooking doc..!<br> 
@@ -11,7 +11,7 @@
   <style> 
       body {
              background-image: url("/foodbackground.jpg"); 
-             background-size: 1400px 800px;
+             background-size: cover;
              background-repeat: no-repeat;
            } 
   </style>
@@ -20,7 +20,9 @@
   <div class="img-wrapper">
       <div class="img-overlay">
         <div class="text-center">
-          <button class= "btn btn-success btn-lg">Browse</button>
+          <button class= "btn btn-success btn-lg">
+           <%= link_to 'Browse', foods_index_path, :style=> 'color:white;', :class => 'css_class'%>
+          </button>
           <button class= "btn btn-success btn-lg">Upload</button>
         </div>
       </div>

@@ -1,0 +1,56 @@
+
+  <h1 style= "color:black; font-style:italic; font-family:fantasy; text-align:center">
+   Articles Listing <br>
+  </h1>
+  <!DOCTYPE html>
+  <html>
+  <style> 
+      body {
+             background-image: url("/homebackground1.jpg"); 
+             background-size: cover;
+             background-repeat: no-repeat;
+           } 
+  </style>
+  </html>
+
+  
+  <table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <!-- <th>Text</th> -->
+    <th>Summary</th>
+    <th>Actions</th>
+    
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <!-- <td><%#= article.text %></td> -->
+      <td><%= article.summary %></td>
+      
+      <td>
+        <%= link_to '', article_path(article), class: "glyphicon glyphicon-book" %> 
+
+        <%= link_to '', edit_article_path(article), class: "glyphicon glyphicon-pencil" %>  
+          <%= link_to '', article_path(article), class: "glyphicon glyphicon-trash",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+
+  <% end %>
+<%#= will_paginate @articles %>
+  
+</table>
+
+  <table>
+      <tr>
+      <td style="padding-right: 600px;">
+        <%= 'CLICK ON THE ADJOINING LINK TO UPLOAD YOUR ARTICLE' %>
+      </td> 
+      <td>
+      <%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
+      </td>
+      </tr>
+  </table>

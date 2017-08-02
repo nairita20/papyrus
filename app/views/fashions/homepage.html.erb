@@ -1,4 +1,4 @@
-<div class="container"> 
+<div class="container" style="margin-top:200px"> 
   <!-- <div class="page-header"> -->
   <h1 style= "color:black; font-style:italic; font-family:fantasy; text-align:center">
   Fashion is a trend...<br>
@@ -10,16 +10,18 @@
   <style> 
       body {
              background-image: url("/fashionbackground.jpg"); 
-             background-size: 1300px 800px;
+             background-size: cover;
              background-repeat: no-repeat;
            } 
   </style>
   </html>
 
-  <div class="img-wrapper">
+  <div class="img-wrapper" style="margin-top:50px">
       <div class="img-overlay">
         <div class="text-center">
-          <button class= "btn btn-success btn-lg", background-color:black;>Browse</button>
+          <button class= "btn btn-success btn-lg", background-color:black;>
+            <%= link_to 'Browse', fashions_index_path, :style=> 'color:white;', :class => 'css_class'%>
+          </button>
           <button class= "btn btn-success btn-lg">Upload</button>
         </div>
       </div>
