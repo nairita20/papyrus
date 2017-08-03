@@ -5,7 +5,13 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all.paginate(:page => params[:page], :per_page => 2)
+    # binding.pry
+    # @articles = Article.all.paginate(:page => params[:page], :per_page => 2)
+    if params[:query].present?
+      @articles = Article.search(params[:query], load: true,fields: [:title], match: :word_start)
+    else
+      @articles = Article.all 
+    end
   end
 
   def edit
