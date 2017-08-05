@@ -20,9 +20,10 @@
   <div class="img-wrapper" style="margin-top:50px">
       <div class="img-overlay">
         <div class="text-center">
-          <button class= "btn btn-success btn-lg", background-color:black;>
-           <%= link_to 'Browse', artworks_index_path, :style=> 'color:white;', :class => 'css_class'%>
-          </button>
+          <!-- <button class= "btn btn-success btn-lg", background-color:black;> -->
+           <%#= link_to 'Browse', artworks_index_path, :style=> 'color:white;', :class => 'css_class'%>
+          <!-- </button> -->
+          <%= link_to "Browse", {:action => "index"}, class: "btn btn-success btn-lg", role: "button" %>
           <button class= "btn btn-success btn-lg">Upload</button>
         </div>
       </div>

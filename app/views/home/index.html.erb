@@ -189,36 +189,43 @@
           <div><h3 style="color:beige;margin-top:50px;">Our sections </h3></div>
           <div class="btn-group-lg" id="categories_group" role="group" style="margin-top:50px">
 
-               <button class= "btn btn-default btn-lg my_btn">
-                  <%= link_to 'Travel', travels_homepage_path, :style=> 'color:white;', :class => 'css_class'%>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                 <%= link_to 'Food', foods_homepage_path, :style=> 'color:white;', :class => 'css_class'%>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                <%= link_to 'Music', musicals_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                <%= link_to 'Art', artworks_homepage_path, :style=> 'color:white;', :class=> 'css_class'%>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                 <%= link_to 'Fashion', fashions_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                 <%= link_to 'Literary', literaries_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                 <%= link_to 'Pets', pets_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                 <%= link_to 'Sports', sports_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                 <%= link_to 'Movies', movies_homepage_path, :style=> 'color:white;', :class=> 'css_class'%>
-               </button>
-               <button class= "btn btn-default btn-lg my_btn">
-                 <%= link_to 'Remembrances', remembrances_homepage_path, :style => 'color:white;', :class => 'css_class'%>
-               </button>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                  <%#= link_to 'Travel', travels_homepage_path, :style=> 'color:white;', :class => 'css_class'%>
+               <!-- </button> -->
+               <%= link_to "Travel", {:controller => "travels", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                 <%#= link_to 'Food', foods_homepage_path, :style=> 'color:white;', :class => 'css_class'%>
+               <!-- </button> -->
+               <%= link_to "Food", {:controller => "foods", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                <%#= link_to 'Music', musicals_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
+               <!-- </button> -->
+               <%= link_to "Music", {:controller => "musicals", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <%= link_to "Art", {:controller => "artworks", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                 <%#= link_to 'Fashion', fashions_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
+               <!-- </button> -->
+               <%= link_to "Fashion", {:controller => "fashions", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                 <%#= link_to 'Literature', literaries_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
+               <!-- </button> -->
+               <%= link_to "Literature", {:controller => "literaries", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                 <%#= link_to 'Pets', pets_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
+               <!-- </button> -->
+               <%= link_to "Pets", {:controller => "pets", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                 <%#= link_to 'Sports', sports_homepage_path, :style=> 'color:white;', :class => 'css_class' %>
+               <!-- </button> -->
+               <%= link_to "Sports", {:controller => "sports", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                 <%#= link_to 'Movies', movies_homepage_path, :style=> 'color:white;', :class=> 'css_class'%>
+               <!-- </button> -->
+               <%= link_to "Movies", {:controller => "movies", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
+               <!-- <button class= "btn btn-default btn-lg my_btn"> -->
+                 <%#= link_to 'Remembrances', remembrances_homepage_path, :style => 'color:white;', :class => 'css_class'%>
+               <!-- </button> -->
+               <%= link_to "Remembrances", {:controller => "remembrances", :action => "homepage"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:white"%>
 
           </div>
         </div>

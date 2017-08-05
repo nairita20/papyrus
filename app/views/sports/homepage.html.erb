@@ -40,9 +40,10 @@
   <div class="img-wrapper" style="margin-top:20px">
       <div class="img-overlay">
         <div class="text-center">
-          <button class= "btn btn-success btn-lg">
-           <%= link_to 'Browse', sports_index_path, :style=> 'color:white;', :class => 'css_class'%>
-          </button>
+          <!-- <button class= "btn btn-success btn-lg"> -->
+           <%#= link_to 'Browse', sports_index_path, :style=> 'color:white;', :class => 'css_class'%>
+          <!-- </button> -->
+          <%= link_to "Browse", {:action => "index"}, class: "btn btn-success btn-lg", role: "button" %>
           <button class= "btn btn-success btn-lg">Upload</button>
         </div>
       </div>

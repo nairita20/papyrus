@@ -26,13 +26,12 @@
     <div class="img-wrapper">
       <div class="img-overlay">
         <div class="text-center">
-          <!-- <button class= "btn btn-md btn-success"> -->
-          <button class= "btn btn-default btn-lg">
-              <%#= button_to 'Explore', :controller => 'home', :action => 'index'%>
-              <%= link_to 'Explore', home_index_path, :style=> 'color:black;', :class => 'css_class' %>
-          </button>
+          <!-- <button class= "btn btn-default btn-lg"> -->
+              <%#= link_to 'Explore', home_index_path, :style=> 'color:black;', :class => 'css_class' %>
+          <!-- </button> -->
+          <%= link_to "Explore", {:controller => "home", :action => "index"}, class: "btn btn-default btn-lg my_btn", role: "button", style:"color:black"%>
           <!-- <div> -->
-          <button class= "btn btn-default btn-lg">Subscribe</button>
+          <button class="btn btn-default btn-lg">Subscribe</button>
           <!-- </div> -->
         </div>
       </div>
