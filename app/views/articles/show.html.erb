@@ -5,7 +5,7 @@
   <html>
   <style> 
       body {
-             background-image: url("/articlesbackground1.jpg"); 
+             background-image: url("/blogbackground1.jpg"); 
              background-size: cover;
              background-repeat: no-repeat;
            } 
@@ -53,6 +53,16 @@
  </td>
  </tr>
 
+ <tr>
+ <td>
+ <p>
+  <strong>Photograph:</strong><br>
+  <%= link_to image_tag(@article.image.url(:large)), @article %>
+  <%#= @article.text %>
+ </p>
+ </td>
+ </tr>
+
   <tr>
   <td>
   <% if @article.comments != [] %>
@@ -63,7 +73,7 @@
       <!-- <h2>Comments:</h2> -->
       <div class="scrollbar" id="style-3", style= "margin-left: 100px;
         float: left;
-        height: 300px;
+        height: 190px;
         width: 800px;
         /*background: #F5F5F5;*/
         overflow-y: scroll;
@@ -108,7 +118,9 @@
 <!-- </p> -->
 
 <tr>
-<td> <%= link_to 'Back', articles_path %>
+<!-- <td> <%#= link_to 'Back', articles_path %> -->
+<td> <%= link_to 'Back',  %>
+
 <%= link_to 'Edit', edit_article_path(@article) %></td>
 </tr>
 

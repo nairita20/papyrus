@@ -42,6 +42,7 @@
       <td><%= article.title %></td>
       <!-- <td><%#= article.text %></td> -->
       <td><%= article.summary %></td>
+      <td><%= image_tag article.image.url(:thumb) %></td>
       
       <td>
         <%= link_to '', article_path(article), class: "glyphicon glyphicon-book" %> 

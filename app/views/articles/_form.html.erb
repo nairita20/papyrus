@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<%= form_for @article do |f| %>
+<%= form_for @article, html: { multipart: true } do |f| %>
  
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -79,7 +79,15 @@
     </p>
     </td>
     </tr>
-
+    
+    <tr>
+    <td>
+    <p>
+      <%= f.label :image %><br>
+      <%= f.file_field :image, class: "form-control" %>
+    </p>
+    </td>
+    </tr>
 
     
     <tr>

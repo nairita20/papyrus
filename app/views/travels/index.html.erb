@@ -1,17 +1,22 @@
+
+  <!DOCTYPE html>
+  <html>
   <h1 style= "color:white; font-style:italic; font-family:fantasy; text-align:center">
    Articles Listing <br>
   </h1>
-  <!DOCTYPE html>
-  <html>
   <style> 
       body {
-             background-image: url("/articlesbackground1.jpg"); 
+             background-image: url("/blogbackground1.jpg"); 
              background-size: cover;
              background-repeat: no-repeat;
            }
              .table{
     background-color: white;
+    border-radius: 25px;
   } 
+  .table>tbody>tr>th {
+    border-top: none;
+  }
   </style>
   </html>
 
@@ -21,6 +26,7 @@
     <th>Title</th>
     <!-- <th>Text</th> -->
     <th>Summary</th>
+    <th>Preview</th>
     <th>Actions</th> 
   </tr>
 
@@ -29,6 +35,10 @@
       <td><%= article.title %></td>
       <!-- <td><%#= article.text %></td> -->
       <td><%= article.summary %></td>
+      <!-- <td><%#= image_tag article.image.url(:medium) %></td> -->
+      <!-- <td><img src=<%#= article.image.url(:medium) %> alt="meow"></td> -->
+      <td><%= link_to image_tag(article.image.url(:medium)), article %></td>
+
       
       <td>
         <%= link_to '', article_path(article), class: "glyphicon glyphicon-book" %> 

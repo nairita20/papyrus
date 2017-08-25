@@ -1,12 +1,11 @@
-  
-  <table> 
+  <table>
     <p>
       <!-- <strong>Commenter:</strong> -->
-      <strong><h4><%= comment.commenter %></h4></strong><strong> says...</strong>
+     <h5><%= comment.commenter %></h5><h5>says...</h5>
     </p>
     <p>
-      <strong>Comment:</strong>
-      <%= comment.body %>
+      <!-- <strong>Comment:</strong> -->
+      <strong><%= comment.body %></strong>
     </p>
     <p>
       <%= link_to 'Destroy Comment', [comment.article, comment],
