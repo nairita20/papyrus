@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   # root "home#index", page: "home"
-  
+    root "welcome#index", page: "welcome"
   get 'home/index'
   get 'authors/homepage'
 
@@ -38,11 +39,11 @@ Rails.application.routes.draw do
   get 'literaries/index'
   get 'artworks/index'
 
-  root "welcome#index", page: "welcome"  
-  
-  resources :articles do
-    resources :comments
-  end  
+  # resources :user do
+    resources :articles do
+      resources :comments
+    end
+  # end  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # root 'welcome#index'
 end
